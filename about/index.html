@@ -364,11 +364,10 @@
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    </script>
 
 
     </div>
@@ -621,7 +620,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"note","value":1},{"name":"nodejs","value":1}],
+                data: [{"name":"nodejs","value":1},{"name":"note","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -645,7 +644,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["message","npm"]
+                data: ["npm","message"]
             }
         ],
         yAxis: [
@@ -828,14 +827,14 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/message/">
-                <span class="chip center-align waves-effect waves-light chip-default">message</span>
+            <a href="/tags/npm/">
+                <span class="chip center-align waves-effect waves-light chip-default">npm</span>
             </a>
             
             
             
-            <a href="/tags/npm/">
-                <span class="chip center-align waves-effect waves-light chip-default">npm</span>
+            <a href="/tags/message/">
+                <span class="chip center-align waves-effect waves-light chip-default">message</span>
             </a>
             
             
@@ -1141,6 +1140,25 @@ $(function () {
 
     
 
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "29d0a6de"
+        });
+        daovoice('update');
+    </script>
     
 
     
